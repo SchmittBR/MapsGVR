@@ -1,0 +1,80 @@
+{
+  "name": "Teste",
+  "nodes": [
+    {
+      "parameters": {
+        "url": "https://n8n.tbdc.com.br/webhook/pluviometria",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "user",
+              "value": "apigvr@tbdc.com.br"
+            },
+            {
+              "name": "password",
+              "value": "nE9*Rl^bw2VF"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "startdate",
+              "value": "2023-11-01"
+            },
+            {
+              "name": "enddate",
+              "value": "2023-11-17"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "7c02c025-9166-42d9-87f0-f6c3d84e8313",
+      "name": "Teste",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1340,
+        360
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "3d62a975-c5cb-4a28-89a1-c859970bc8ba",
+      "name": "Start",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        1120,
+        360
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Teste",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "a2576bb6-445b-4bc5-a1d7-211d0a2632fa",
+  "id": "oAiOq4qCSoyJlmnB",
+  "meta": {
+    "instanceId": "fc72c184b5d098710fa27e34003999abb750895e2ed1652231cc818f8c587390"
+  },
+  "tags": []
+}
